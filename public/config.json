@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "Postcard",
-          "description": "A custom Journey Builder activity to send a postcard",
+            "name": "Email Validation",
+          "description": "A custom Journey Builder activity to validate email address and send",
           "step1Label": "Configure Activity"
         }
     },
