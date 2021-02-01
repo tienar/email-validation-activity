@@ -63,29 +63,6 @@ define([
 
     function onGetEndpoints(endpoints) {
         console.log(endpoints);
-    }
-
-    function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
-
-        payload['arguments'].execute.inArguments = [{
-            "postcardURL": postcardURLValue,
-            "postcardText": postcardTextValue,
-            "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
-        }];
-        
-        payload['metaData'].isConfigured = true;
-
-        console.log(payload);
-        connection.trigger('updateActivity', payload);
-       
-    }
-    $('#btn-preview').click(function(){
-        alert('Hello');
-    $('postcard-preview-text').html($('#postcard-text').val());
-    $('postcard-preview-content').css('background-image',"url('"+$('#postcard-url').val()+"')");
-    });                              
+    }            
 
 });
