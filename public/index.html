@@ -11,7 +11,7 @@
     	
     <link rel="stylesheet" href="css/styles.css">
     <script type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
-	<script type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type= "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  
     <script type="text/javascript">
         (function () {
@@ -29,47 +29,13 @@
 </head>
 
 <body>
-    <div id="step1" class="step">
-        <div class="slds-grid">
-
-            <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
-                <div class="slds-form slds-form_stacked">
-                    <div class="slds-form-element">
-			    
-			<label class="slds-form-element__label" for="postcard-url">Postcard URL</label>
-			    
-						<div class="slds-form-element__control">
-							<textarea id="postcard-url" class="slds-textarea" rows="1"></textarea>
-						</div>    
-			   
-                        <label class="slds-form-element__label" for="postcard-text">Postcard Text</label>
-			    
-						<div class="slds-form-element__control">
-							<textarea id="postcard-text" class="slds-textarea" rows="3"></textarea>
-						</div>
-                    </div>
-					<div class="slds-form-element">
-						<button id="btm-preview" class="slds-button slds-button_brand">Preview Text</button>
-						<a onclick='newwin()'>Anchor</a>
-					</div>
-                </div>           
-            </main>
-            <aside class="slds-col slds-size--2-of-3 slds-border_left slds-p-horizontal--small">
-				<div class="postcard-preview">
-					<div class="postcard-preview-content" style="background: no-repeat;">
-						<p id="postcard-preview-text" style="padding-top: 50px;">Postcard Text</p>
-					</div>
-				</div>
-			</aside>
-
-        </div>
-
-    </div>
+	<form>
+	  <label for="fname">Email Address:</label><br>
+	  <input type="email" id="emailAddress" name="emailAddress" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,8}$" required><br>
+	</form>
+	
 	<script>
-		function newwin(){
-    $('#postcard-preview-text').html($('#postcard-text').val());
-    $('.postcard-preview-content').css('background-image',"url('"+$('#postcard-url').val()+"')");
-    };   
+		
 	
 	</script>
 </body>
